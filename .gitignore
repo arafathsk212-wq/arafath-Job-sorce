@@ -1,0 +1,28 @@
+# Java
+/target/
+*.log
+*.class
+/.mvn
+!.mvn/wrapper/maven-wrapper.jar
+**/application.properties
+**/application-local.properties
+*.iml
+*.ipr
+*.iws
+.idea/
+out/
+
+# React
+/node_modules
+/build
+/.env
+/.env.local
+/.env.*.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+coverage/
+
+# OS
+.DS_Store
+Thumbs.db

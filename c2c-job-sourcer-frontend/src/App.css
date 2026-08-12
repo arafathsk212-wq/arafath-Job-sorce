@@ -1,0 +1,83 @@
+.App {
+  font-family: Arial, sans-serif;
+  padding: 24px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.control-panel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 24px;
+  align-items: flex-end;
+}
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+  min-width: 220px;
+}
+
+.control-group label {
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.control-group input {
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+}
+
+button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+.status-message {
+  margin-bottom: 20px;
+  color: #1f2937;
+  font-weight: 600;
+}
+
+.job-list {
+  display: grid;
+  gap: 16px;
+}
+
+.job-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+.job-card h2 {
+  margin: 0 0 8px;
+}
+
+.job-card p {
+  margin: 4px 0;
+}
+
+.job-card a {
+  display: inline-block;
+  margin-top: 8px;
+  color: #1d4ed8;
+  text-decoration: none;
+}
+
+.job-card a:hover {
+  text-decoration: underline;
+}
