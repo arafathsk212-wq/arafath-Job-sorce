@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: c2c-job-sourcer-backend
+    env: docker
+    dockerfilePath: c2c-job-sourcer-backend/Dockerfile
+    plan: free
+    repo: "" # set by Render when connecting GitHub repo
+    branch: main
+    buildCommand: mvn -DskipTests package
+    startCommand: java -jar target/*.jar
+    envVars: []
+
+# Note: After connecting this repo to Render, set the following environment variables
+# - linkedin.scraper.username -> as LINKEDIN_SCRAPER_USERNAME
+# - linkedin.scraper.password -> as LINKEDIN_SCRAPER_PASSWORD
+# - linkedin.scraper.headless -> as LINKEDIN_SCRAPER_HEADLESS (true/false)
+# Also set any production DB URL if you switch from H2 to Postgres.
