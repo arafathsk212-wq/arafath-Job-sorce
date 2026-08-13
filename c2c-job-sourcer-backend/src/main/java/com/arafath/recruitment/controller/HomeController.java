@@ -18,7 +18,9 @@ public class HomeController {
         return new RedirectView("/api/jobs");
     }
 
-    @RequestMapping("/error")
+    // Avoid mapping '/error' which conflicts with Spring Boot's BasicErrorController.
+    // Use a custom error endpoint if needed.
+    @RequestMapping("/error-custom")
     public ResponseEntity<Map<String, Object>> handleError(HttpServletRequest request) {
         Map<String, Object> body = new HashMap<>();
         body.put("status", "error");
