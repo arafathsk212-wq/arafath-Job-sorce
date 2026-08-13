@@ -1,7 +1,0 @@
-com\arafath\recruitment\model\Job.class
-com\arafath\recruitment\service\JobScraperService.class
-com\arafath\recruitment\service\JobService.class
-com\arafath\recruitment\C2cJobSourcerBackendApplication.class
-com\arafath\recruitment\repository\JobRepository.class
-com\arafath\recruitment\controller\JobController.class
-com\arafath\recruitment\dto\JobFilterRequest.class
