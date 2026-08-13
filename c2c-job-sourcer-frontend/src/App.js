@@ -7,8 +7,8 @@ function App() {
   const [error, setError] = useState(null);
   const [query, setQuery] = useState('java');
   const [location, setLocation] = useState('remote');
-  const [titleFilter, setTitleFilter] = useState('');
-  const [companyFilter, setCompanyFilter] = useState('');
+  const [titleFilter] = useState('');
+  const [companyFilter] = useState('');
   const [onlyC2C, setOnlyC2C] = useState(true);
   const [visaGC, setVisaGC] = useState(true);
   const [interviewOffline, setInterviewOffline] = useState(false);
@@ -32,6 +32,8 @@ function App() {
       });
   };
 
+  // loadJobs intentionally not included in deps to run only on mount
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     loadJobs();
   }, []);
