@@ -48,3 +48,22 @@ cd c2c-job-sourcer-frontend
 npm install
 npm run build
 
+GitHub Actions deployment (automated)
+
+This repo includes two GitHub Actions workflows:
+
+- `.github/workflows/deploy-backend-render.yml` — builds the backend and triggers a Render deploy via the Render API.
+- `.github/workflows/deploy-frontend-vercel.yml` — builds the frontend and deploys to Vercel using the Vercel Action.
+
+Before these workflows will succeed, add the following **Repository secrets** in GitHub (Settings → Secrets and variables → Actions → New repository secret):
+
+- `RENDER_API_KEY` — Render API key with permission to trigger deploys.
+- `RENDER_SERVICE_ID` — Render service id for your backend service (e.g. `srv-xxxxxxxx`).
+- `VERCEL_TOKEN` — Vercel personal token.
+- `VERCEL_ORG_ID` — Vercel organization id.
+- `VERCEL_PROJECT_ID` — Vercel project id for the frontend.
+
+After adding the secrets, push any commit to `main` or manually run the workflow from the Actions tab to trigger deploys. The backend workflow will call the Render API to start a build; Render will build using the `c2c-job-sourcer-backend/Dockerfile`.
+
+If you prefer to trigger Render manually instead of using the API, connect the repo in the Render dashboard and enable automatic deploys for `main`.
+
